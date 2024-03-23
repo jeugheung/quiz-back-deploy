@@ -15,14 +15,14 @@ app.use(express.json());
 const server = http.createServer(app);
 
 server.listen(5002, () => {
-  console.log('Express server started on port 5002');
+  console.log('Express server started on port 5002 **');
 });
 
 const io = require('socket.io')(server, {
   cors: {
     origin: '*', // Указываем домен вашего фронтенда
     methods: ['GET', 'POST'], // Указываем разрешенные методы запросов
-    allowedHeaders: ['*'] 
+    allowedHeaders: ['*'] // Разрешить все заголовки
   }
 });
 
