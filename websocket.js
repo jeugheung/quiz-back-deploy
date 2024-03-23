@@ -59,6 +59,9 @@ function broadcastMessage(message) {
   io.emit('message', JSON.stringify(message));
 }
 
+app.get('/', function(req, res) {
+  res.send('Hello from your sercer deploy')
+})
 
 app.get('/questions', async (req, res) => {
   try {
