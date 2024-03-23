@@ -20,8 +20,9 @@ server.listen(5002, () => {
 
 const io = require('socket.io')(server, {
   cors: {
-    origin: 'http://localhost:4000', // Указываем домен вашего фронтенда
-    methods: ['GET', 'POST'] // Указываем разрешенные методы запросов
+    origin: '*', // Указываем домен вашего фронтенда
+    methods: ['GET', 'POST'], // Указываем разрешенные методы запросов
+    allowedHeaders: ['*'] 
   }
 });
 
