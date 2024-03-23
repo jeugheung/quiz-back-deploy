@@ -1,6 +1,6 @@
 const express = require('express');
 const http = require('http');
-const socketIo = require('socket.io');
+// const socketIo = require('socket.io');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const Question = require('./models/question-model');
@@ -22,7 +22,6 @@ const io = require('socket.io')(server, {
   cors: {
     origin: '*', // Указываем домен вашего фронтенда
     methods: ['GET', 'POST'], // Указываем разрешенные методы запросов
-    allowedHeaders: ['*'] // Разрешить все заголовки
   }
 });
 
